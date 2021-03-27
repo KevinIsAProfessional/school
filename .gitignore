@@ -1,7 +1,0 @@
-# Ignore large image files
-*.png
-*.xcf
-*.jpg
-
-# Ignore powerpoints
-*.pptx
