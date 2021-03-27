@@ -1,0 +1,14 @@
+.:
+homework-00.sh
+out.txt
+subdirectory
+test2.zip
+test.shell
+test.zip
+yeesh.txt
+
+./subdirectory:
+otherscript.sh
+something.zip
+test1.py
+test2.py

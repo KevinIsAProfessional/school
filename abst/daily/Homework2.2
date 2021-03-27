@@ -1,0 +1,76 @@
+Definition 2.1:
+  An integer is even if n=2k for some integer k.
+  
+Definition 2.2:
+  An integer is odd if n=2k+1 for some integer k.
+
+Definiton 2.11:
+  An integer n divides the integer m, written n|m, if and only if there exists an integer k such that m = nk. We may also say that m is divisible by n.
+
+Fact 2.3.1:
+  Every integer is either even or odd, but never both
+
+Fact 2.3.2:
+  Sums and products of integers are integers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Theorem 2.15: Assume n, m, and a are integers. If a|n, then a|mn.
+  Let us take integers m, n and a, where a|n. Consider the statement a|mn. By Definition 2.11, we know that mn/a must be an integer for a|mn to hold true.  
+  By Definiton 2.11, we say n=ak, where k is an integer. 
+  Next, we show that mn/a = m(ak)/a = mk. By Fact 2.3.2, we know that mk is an integer, and by extension we know a|mn. []
+
+
+
+
+
+
+
+
+
+
+
+Corollary 2.16: Assume n and a are integers. If a divides n, then a divides n^2.
+  By Theorem 2.15, we know that any integer a that divides an integer n will also divide any myltiple of n, written m*n, provided m is an integer. 
+  Since we know that n^2 is a multiple of n, we know that a divides n^2. []
+
+
+
+
+
+
+
+
+
+
+
+
+Problem 2.17: Assume n and a are integers. Consider the statement "If a divides n^2, then a divides n". Is this statement always true? Is it always false? Prove that your answers are correct by giving particular examples and/or general arguments. 
+
+  The statement "if a|n^2, then a|n" is only sometimes true. 
+  Consider the case where a=4 and n=2. In this case, n^2/a = 4/4 = 1, and n/a = 2/4 = 1/2. This shows us a case where the statement is not true.
+  Now consider the case where a=2 and n=2. In this case, n^2/a = 4/2 = 2, and n/a = 2/2 = 1. This shows us a case where the statement is true. 
+  Therefore, our statement is sometimes true and sometimes false.  
+
+
+
+
+
+
+
+
+
+
+Theorem 2.18: Assume n and a are integers. If a divides n, then a divides -n.
+  By Theorem 2.15, we know that if a|n, then a|mn where m is an integer. We can write -n as n*-1, and -1 is an integer by definition. Therefore, we know that if a|n, then a|-n. []

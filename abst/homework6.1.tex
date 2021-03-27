@@ -1,0 +1,121 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{dsfont}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{fact}[2][Fact]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{definition}[2][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Daily Homework 6.1}%replace X with the appropriate number
+\author{Kevin Christensen, Ailey Robinson\\ %replace with your name
+Introduction to Abstract Math} %if necessary, replace with your course title
+ 
+\maketitle
+ 
+\begin{theorem}{3.61}
+For all integers $3n^2 + n + 14$ is even.
+\end{theorem}
+ 
+\begin{proof}
+There are two possibilities for $n$, either $n$ is even or $n$ is odd. If $n$ is even, we express it as $n = 2k$ and substitute that into the equation, giving us $3n^2 + n + 14 = 12k^2 + 2k + 14 = 2(6k^2 + k + 7)$. By Definition 2.1, this is an even integer.\\
+If $n$ is odd, we can express it as $n = 2k + 1$. This gives us the equation $3n^2 + n + 14 = 12k^2 + 12k + 3 + 2k + 1 + 14 = 2(6k^2 + 7k + 9)$. By Definition 2.1, this is also an even integer.\\
+Because both possibilities for $n$ make $3n^2 + n + 14$ even, we know that the statement is true for all integers $n$.
+\end{proof}
+ 
+\begin{exercise}{4.4}
+Unpack each of the following sets and see if you can find a simple description of the elements that each set contains.
+\begin{enumerate}
+    \item A = $\{$ $x \in \N \mid x=3k$ for some $k \in N$ $\}$
+    \item B = $\{$ $t \in \mathds{R} \mid t^2 \le 2$ $\}$
+    \item C = $\{$ $t \in \Z \mid t^2 \le 2$ $\}$
+    \item D = $\{$ $m \in \mathds{R} \mid m=1-\frac{1}{n}$, where $n \in N$ $\}$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{solution} $\\$
+\begin{enumerate}
+    \item A is the set of natural numbers that are divisible by 3.
+    \item B is the set of rational numbers that are between -$\sqrt{2}$ and $\sqrt{2}$.
+    \item C is the set of integers that are between -$\sqrt{2}$ and $\sqrt{2}$.
+    \item D is the set of real numbers between 0 and 2.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}{4.5}
+Write each of the following sentences using set builder notation.
+\begin{enumerate}
+    \item The set of all real numbers less than -$\sqrt{2}$.
+    \item The set of all real numbers greater than -12 and less than or equal to 42.
+    \item The set of all even natural numbers.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}$ $\\
+\begin{enumerate}
+    \item A = $\{$ $x \in \mathds{R} \mid x < -\sqrt{2}$ $\}$
+    \item B = $\{$ $y \in \mathds{R} \mid -12 < x \le 42$ $\}$
+    \item C = $\{$ $z \in \N \mid z = 2k, k \in \Z$ $\}$
+\end{enumerate}
+
+\end{solution}
+
+
+\begin{problem}{4.7}
+Suppose $A$ and $B$ are sets. Describe a skeleton proof for proving that $A \subseteq B$.
+\end{problem}
+
+ 
+\begin{solution}
+Let $x \in A$.
+\begin{center}... [$\textit{Use definitions and known results to prove}$ $x \in B.$] ...\end{center}
+By Definition 4.6, $A \subseteq B$.
+
+\end{solution}
+
+\begin{theorem}{4.8}
+Let $S$ be a set. Then $S \subseteq S$ and $\emptyset \subseteq S$.
+\end{theorem}
+
+\begin{proof}$ $ \\
+Assume $x \in S$. For any chosen $x$, we know that $x \in S$. Therefore, by Definition 4.6, $S \subseteq S$.\\
+Since $\emptyset$ contains no elements, we can always take the entirety of the empty set from any set containing 0 or more elements. Therefore, $\emptyset \in S$.
+\end{proof}
+ 
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}

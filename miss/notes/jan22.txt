@@ -1,0 +1,16 @@
+Globbing:
+  * = wildcard, matches anything
+    e.g. '*e*' matches any word with an e in it
+
+  {} = give a set of values to match
+    e.g. image.{png,jpg} matches both image.png and image.jpg
+    e.g. *.{png,jpg} matchees any file with a .png suffix or a .jpg suffix
+
+  {x..y} = matches anthing in the range between x and y, where x and y are ascii valued.
+    e.g. file{1..8}.py matches file1.py, file2.py, file3.py ... file8.py.
+
+  
+
+grep:
+  a search function.
+  

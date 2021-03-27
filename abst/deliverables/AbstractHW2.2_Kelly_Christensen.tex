@@ -1,0 +1,94 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{fact}[2][Fact]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{definition}[2][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Daily Homework 2.2}%replace X with the appropriate number
+\author{Kevin Christensen and Joe Kelly\\ %replace with your name
+Introduction to Abstract Math} %if necessary, replace with your course title
+ 
+\maketitle
+
+ 
+\begin{theorem}{2.15} 
+ Assume n,m,a $\in \Z$. If a$\mid$n, then a$\mid$mn.
+\end{theorem}
+ 
+\begin{proof}  
+By Definition 2.11, we can write mn = m(ak), where k $\in \Z$. 
+\begin{align*}
+\frac{mn}{a} & = \frac{m(ak)}{a} \\
+& = km.
+\end{align*}We know by Fact 2.3 that $km$ is an integer. Therefore, by Definition 2.11, a$\mid$mn.
+\end{proof}
+
+\begin{corollary}{2.16}
+Assume n,a $\in \Z$. If a divides n, then a divides $n^{2}$.
+\end{corollary}
+
+\begin{proof}
+By Theorem 2.15, we know that if a$\mid$n then a$\mid$mn. If m = n, then mn = $n^2$. Therefore, since a$\mid$n, we know that a$\mid$$n^2$.
+\end{proof}
+
+ 
+\begin{problem}{2.17} 
+Assume n,a $\in \Z$. Consider the statement:
+\begin{center}
+\fbox{If a divides $n^{2}$ then a divides n.}\\
+\end{center}
+Is this statement always true? Is it always false? Prove that your answers are correct by giving particular examples and/or general arguments.
+\end{problem}
+ 
+\begin{proof} 
+This statement is only sometimes true.\\
+Consider a case described by Corollary 2.16. Here, a$\mid$${n^2}$ and a$\mid$n. This is a case where the statement is true. \\
+Now consider the case where a = 8 and n = 4. ${n^2}$/a = 16/8 = 2 $\in \Z$, so a$\mid$${n^2}$. However, n/a = 4/8 = 1/2 $\notin \Z$. In this case, the statement is false because a divides $n^2$ but not n.
+\end{proof}
+
+\begin{theorem}{2.18}
+Assume n,a $\in \Z$. If a divides n, then a divides -n.
+\end{theorem}
+ 
+\begin{proof}  
+Let m = -1. By Theorem 2.15, if a$\mid$n, a$\mid$mn. Therefore, if a divides n, a also divides -n. \\
+
+\end{proof}
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}

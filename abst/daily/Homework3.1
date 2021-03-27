@@ -1,0 +1,60 @@
+######### Givens: #########
+
+Definition 2.1:
+  An integer is even if n=2k for some integer k.
+  
+Definition 2.2:
+  An integer is odd if n=2k+1 for some integer k.
+
+Definiton 2.11:
+  An integer n divides the integer m, written n|m, if and only if there exists an integer k such that m = nk. We may also say that m is divisible by n.
+
+Fact 2.3.1:
+  Every integer is either even or odd, but never both
+
+Fact 2.3.2:
+  Sums and products of integers are integers
+
+Theorem 2.15:
+  Assume n,m,a in Z. If a|n, then a|mn
+
+
+######## Problems: #########
+
+Theorem 2.18: Assume n,a in Z. If a|n, then a divides -n
+  Theorem 2.15 states that if a|n, then a|nm for some integer m. If m=-1, then nm=-n. Therefore, a|-n. []
+ 
+
+
+
+ 
+Theorem 2.19: Assume n,m,a in Z. If a|m and a|n, then a|(n+m)
+  By Definition 2.11, we know n=ak and m=aj for some integers k,j. We can express m+n as ak+aj = a(k+j). We know by Fact 2.3.2 that k+j is an integer, therefore we know by Definition 2.11 that a|(n+m). []
+
+
+
+
+
+Theorem 2.20: Assume n,m,a in Z. If a|m and a|n, then a|(n-m)
+  By Definition 2.11, we know n=ak and m=aj for some integers k,j. We can express m-n as ak-aj = a(k-j). We know by fact 2.3.2 that k-j is an integer, therefore we know by Definition 2.11 that a|(n-m). []
+
+
+
+
+
+Problem 2.21: Assume a,b,m in Z. Determine whether the following statement holds sometimes, always, or never. "If ab divides m, then a divides m and b divides m." Justify with proof or counterexample.
+  By Definition 2.11, we say m = a*b*k for some integer k. Note that m/a = a*b*k/a = bk and m/b = a*b*k/b = ak. Both ak and bk are integers by Fact 2.3.2, therefore a|m and b|m. []
+
+
+
+
+
+Theorem 2.22: If a,b,c in Z are such that a|b and b|c, then a|c
+  By Definition 2.11, b = ak and c = bj = akj. Since c/a = akj/a = kj, and kj is an integer by Fact 2.3.2, we know that a|c. []
+
+
+
+
+
+Thereom 2.23: If n in Z then 3|(n+(n+1)+(n+2))
+  We rewrite (n(n+1)+(n+2)) = n+n+n+3 = 3n+3 = 3(n+1). Note that n+1 is an integer by Fact 2.3.2. Therefore, 3|(n+(n+1)+(n+2)). []

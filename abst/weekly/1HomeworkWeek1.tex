@@ -1,0 +1,82 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{fact}[2][Fact]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{definition}[2][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Weekly Homework 1}%replace X with the appropriate number
+\author{Kevin Christensen\\ %replace with your name
+Introduction to Abstract Math} %if necessary, replace with your course title
+ 
+\maketitle
+
+\begin{definition}{2.1}
+An integer is even if n=2k for some integer k
+\end{definition}
+
+\begin{definition}{2.2}
+An integer is odd if n=2k+1 for some integer k
+\end{definition}
+
+\begin{fact}{2.3.1} 
+Sums and products of integers are integers.
+\end{fact}
+
+\begin{theorem}{2.4} %You can use theorem, exercise, problem, or question here.  Modify x.yz to be whatever number you are proving
+If n $\in \Z$ then the sum of n and n+1 is odd.
+\end{theorem}
+
+\begin{proof} %You can also use solution in place of proof.
+Let n be an integer. Notice that n+(n+1)=2n+1. By Definition 2.2, we see that 2n+1 is odd.
+\end{proof}
+
+\begin{problem}{2.6}
+Either prove, or provide a counterexample to, the statement "The sum of an even integer and an odd integer is odd."
+\end{problem}
+ 
+\begin{proof}
+Let n be an even integer and m be an odd integer. By Definitions 2.1 and 2.2 respectively, we can write n as 2k and m as 2j+1.
+\begin{align*}
+    n+m& = 2k+2j+1\\
+    & = 2(k+j)+1\\
+\end{align*}
+We know that (k+j) is an integer by Fact 2.3.1. Therefore, we show by Definition 2.2 that 2(k+j)+1 is odd for all values of k and j.
+\end{proof}
+ 
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}

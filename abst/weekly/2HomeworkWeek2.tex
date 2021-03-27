@@ -1,0 +1,92 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{fact}[2][Fact]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{definition}[2][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Weekly Homework 2}%replace X with the appropriate number
+\author{Kevin Christensen\\ %replace with your name
+Introduction to Abstract Math} %if necessary, replace with your course title
+ 
+\maketitle
+
+\begin{definition}{2.1}
+An integer is even if n=2k for some integer k
+\end{definition}
+
+\begin{definition}{2.2}
+An integer is odd if n=2k+1 for some integer k
+\end{definition}
+
+\begin{definition}{2.11}
+An integer n divides the integer m, written n$\mid$m, if and only if there exists k $\in \Z$ such that m=nk. We may also say that m is divisible by n.
+\end{definition}
+
+\begin{fact}{2.3.1} 
+Sums and products of integers are integers.
+\end{fact}
+
+\begin{problem}{2.10} %You can use theorem, exercise, problem, or question here.  Modify x.yz to be whatever number you are proving
+Either prove, or provide a counterexample to, the statement "If at least one of a pair of integers is even, then their product is even."
+\end{problem}
+ 
+\begin{proof}
+ %You can also use solution in place of proof.
+Consider m,n $\in \Z$, such that n is even. By Definition 2.1, we know n=2k.
+\begin{align*}
+    n*m & = (2k)*m\\
+& = 2(km)
+\end{align*}
+By Fact 2.3.2, we know that $km$ is an integer. Therefore, 2$km$ is even by Definition 2.1.
+\end{proof}
+ 
+\begin{theorem}{2.15}
+Assume n,m,a $\in \Z$. If a$\mid$n, then a$\mid$nm.
+\end{theorem}
+ 
+\begin{proof}
+  Assume n,m,a $\in \Z$, and that a$\mid$n. By Definition 2.11, in order for the statement a$\mid$mn to be true, we know that $\frac{mn}{a}$ must be an integer.\\
+\begin{align*}
+    \frac{mn}{a} & = \frac{m(ak)}{a} & (\text{By Definition 2.11})\\
+    & = mk
+\end{align*}
+By Fact 2.3.1, we know that mk is an integer. Therefore, we know a$\mid$mn is true.
+\end{proof}
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}

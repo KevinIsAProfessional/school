@@ -1,0 +1,130 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{fact}[2][Fact]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{definition}[2][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{conjecture}{\begin{proof}[Conjecture]}{\end{proof}}
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+
+
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Daily Homework 3.3}%replace X with the appropriate number
+\author{Kevin Christensen\\ %replace with your name
+Introduction to Abstract Math} %if necessary, replace with your course title
+ 
+\maketitle
+
+\begin{definition}{3.3}
+Given two propositions A, B, we say A is true if and only if B is true (or “A
+iff B” or “$A \iff B$”) if A is true exactly when B is true. That is, $A \iff B$ means that if A is true then B is true, and if A is false then B is false.
+\end{definition}
+
+\begin{problem}{3.13}
+A coach promises, “If we win tonight, then I will buy you pizza tomorrow.” \\
+Determine the case(s) in which the players can rightly claim to have been lied to. Use this to help create a truth table for the proposition $A \implies B$.
+\end{problem}
+
+\begin{solution}
+The players have been lied to if they win and the coach does not buy them pizza the next day. They have also been lied to if they win and the coach buys them pizza that night, or two days after. \\
+\begin{displaymath}
+\begin{array}{|c c|c|}
+A & B & A \implies B\\
+\hline
+T & T & T\\
+T & F & F\\
+F & T & F\\
+F & F & F\\
+\end{array}
+\end{displaymath}
+\end{solution}
+
+\begin{definition}{3.14}
+Two statements A and B are (logically) equivalent, expressed symbolically as $A \iff B$, if and only if they have the same truth table.
+\end{definition}
+
+\begin{exercise}{3.15}
+Explain why Definition 3.14 and Definition 3.3 both assign the same meaning to the symbol $\iff$.
+\end{exercise}
+
+\begin{solution}
+Definition 3.14 says that $\iff$ applies when two propositions have the same truth table. Definition 3.3 says that $\iff$ applies when propositions A and B always have the same value. If two propositions always have the same value, then they have the same truth table. Therefore, Definitions 3.14 and 3.3 are two different ways of saying the same thing about the symbol $\iff$. 
+\end{solution}
+
+\begin{theorem}{3.16}
+(DeMorgan's Law). If A and B are propositions, then $\neg (A \wedge B) \iff \neg A \vee \neg B$
+\end{theorem}
+
+\begin{proof}
+Here are the truth tables for $\neg (A \wedge B)$ and $\neg A \vee \neg B$:
+\begin{displaymath}
+\begin{array}{|c c|c|c|}
+A & B & \neg(A \wedge B) & \neg A \vee \neg B\\
+\hline
+T & T & F & F\\
+T & F & T & T\\
+F & T & T & T\\
+F & F & T & T\\
+\end{array}
+\end{displaymath}
+Note that both both propositions have the same truth table. Therefore, by Definition 3.14,  $\neg (A \wedge B) \iff \neg A \vee \neg B$.
+\end{proof}
+
+\begin{problem}{3.17}
+Let A and B be propositions. Conjecture a statement similar to Theorem 3.16 for the proposition $\neg (A \vee B)$ and then prove it. This is also called DeMorgan's Law.
+\end{problem}
+
+\begin{conjecture}
+$\neg (A \vee B) \iff \neg A \wedge \neg B$.
+\end{conjecture}
+
+\begin{proof}
+Here are the truth tables for $\neg (A \vee B)$ and $\neg A \wedge \neg B$:
+\begin{displaymath}
+\begin{array}{|c c|c|c|}
+A & B & \neg (A \vee B) & \neg A \wedge \neg B\\
+\hline
+T & T & F & F\\
+T & F & F & F\\
+F & T & F & F\\
+F & F & T & T\\
+\end{array}
+\end{displaymath}
+Note that both both propositions have the same truth table. Therefore, by Definition 3.14,  $\neg (A \vee B) \iff \neg A \wedge \neg B$.
+\end{proof}
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}

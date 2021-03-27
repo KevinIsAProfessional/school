@@ -1,0 +1,77 @@
+Definition 2.1:
+  An integer is even if n=2k for some integer k.
+  
+Definition 2.2
+  An integer is odd if n=2k+1 for some integer k.
+
+Definiton 2.11:
+  An integer n divides the integer m, written n|m, if and only if there exists an integer k such that m = nk. We may also say that m is divisible by n.
+
+Fact 2.3.1
+  Every integer is either even or odd, but never both
+
+Fact 2.3.2
+  Sums and products of integers are integers
+
+
+
+
+
+
+
+Problem 2.9: Either prove, or provide a counterexample to, the statement "The product of an odd integer and an odd integer is odd."
+  Let us take two odd integers, m and n, and write them as 2k+1 and 2j+1 by Definition 2.2. 
+    m*n = (2k+1)*(2j+1)
+        = 4kj+2k+2j+1
+        = 2(2kj+k+j)+1
+  By Fact 2.3.2, we know that 2kj+k+j is an integer. Therefore, we can use Definition 2.2 to say that the product of two odd integers is odd.[]
+
+
+
+
+
+
+Problem 2.10: Either prove, or provide a counterexample to, the statement "If at least one of a pair of integers is even, then their product is even."  
+  Let us take an even integer n and any integer m. By Definition 2.1, we know that n=2k.
+    n*m = (2k)*m
+        = 2(km)
+  By Fact 2.3.2, we know that km is an integer. Therefore, we know by Definition 2.1 that 2km is even for any integers k and m. []
+
+
+
+
+
+
+
+Question 2.12: For integers n and m, how are the mathematical expressions m|n and m/n different?
+  The expression m/n stands for "m divided by n", which is a mathematical operator that will return the result of the division whether that number is an integer or a rational number. The expression is valid for all values of m and for any value of n, provided that n!=0.
+ 
+  The expression m|n stands for "m is divisible by n" which returns a true or false value based on whether or not n divides "evenly" into m. In other words, the statement m|n is true if m/n returns an integer, and false of m/n returns any number that is not an integer. In other other words, one could say m|n if and only if m=nk for where m, n, and k are all integers.
+
+
+
+
+
+
+
+
+Problem 2.13: Let n be an integer. Either prove or provide a counterexample to the statement "If 6 divides n, then 3 divides n."
+  Using Definition 2.11, we know that n=6k for some integer k. 
+    n = 6k
+      = 3(2k)
+  We know that 2k is an integer by Fact 2.3.2. Therefore, Definition 2.11 tell us that n is divisible by 3. []
+
+
+
+
+
+
+     
+
+Problem 2.14: let n be an integer. Either prove, or provide a counterexample to, the statement "If 6 divides n, then 4 divides n."
+  If the conjecture in our statement is true, then we know by Definition 2.11 that n=6k=4j for some integers k and j.
+  Let us consider the case k=3. This would make n=6(3)=18, and therefore would give us the equality n=18=4j, or j=9/2.
+  We notice that 9/2 is not an integer, therefore j is not an integer and our conjecture is false. []
+
+Conjecture?
+Using the same Definition/Fact numbers

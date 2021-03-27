@@ -1,0 +1,126 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{fact}[2][Fact]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{definition}[2][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Daily Homework 2-1-21}%replace X with the appropriate number
+\author{Kevin Christensen, Joe Kelly\\ %replace with your name
+Introduction to Abstract Math} %if necessary, replace with your course title
+ 
+\maketitle
+ 
+\begin{definition}{3.18}
+The converse of $A \implies B$ is $B \implies A$.
+\end{definition}
+
+\begin{exercise}{3.19} 
+Provide an example of a true conditional proposition whose converse is false.
+\end{exercise}
+ 
+\begin{proof}
+The statement "if $x=5$, then x is odd" is a true conditional statement. However, the converse of the statement is "if x is odd, then $x=5$," and this statement is not true.
+\end{proof}
+ 
+ \begin{definition}{3.18}
+The inverse of $A \implies B$ is $\neg A \implies \neg B$.
+\end{definition}
+
+\begin{exercise}{3.21} 
+Provide an example of a true conditional proposition whose inverse is false. 
+\end{exercise}
+ 
+\begin{proof}
+Let A be "$x=5$" and B be "x is odd". The inverse of the statement $A \implies B$ is "if $x \neq 5$, then x is not odd". This is a false statement because x could be an odd number that is not 5. 
+\end{proof}
+
+\begin{exercise}{3.23} 
+Let A represent "6 is an even number" and B represent "6 is a multiple of 4". Express the following in ordinary English sentences:
+\begin{enumerate}
+    \item The converse of $A \implies B$. 
+    \item The contrapositive of $A \implies B$. 
+\end{enumerate}
+\end{exercise}
+ 
+\begin{proof}
+\begin{enumerate}
+    \item If "6 is a multiple of 4" then "6 is an even number".
+    \item If "6 is not a multiple of 4" then "6 is not an even number".
+\end{enumerate}
+\end{proof}
+
+\begin{exercise}{3.24} 
+Find the converse and the contrapositive of the following statement: "If a person lives in Flagstaff then that person lives in Arizona."
+\end{exercise}
+ 
+\begin{proof}
+\begin{enumerate}
+    \item Converse: If a person lives in Arizona, then that person lives in Flagstaff.
+    \item Contrapositive: If a person doesn't live in Arizona, then that person does not live in Flagstaff.
+\end{enumerate}
+\end{proof}
+ 
+\begin{theorem}{3.25}
+The implication $A \implies B$ is equivalent to its contrapositive.
+\end{theorem}
+ 
+\begin{proof}
+\begin{displaymath}
+\begin{array}{|c c|c|}
+A & B & A \implies B\\
+\hline
+T & T & T\\
+T & F & F\\
+F & T & T\\
+F & F & T\\
+\end{array}
+\quad
+\begin{array}{|c c|c|}
+\neg B & \neg A & \neg B \implies \neg A\\
+\hline
+T & T & T\\
+T & F & F\\
+F & T & T\\
+F & F & T\\
+\end{array}
+\end{displaymath}
+We see that the truth tables for $A \implies B$ and $\neg B \implies \neg A$ are the same. Therefore, by Definition 3.14, the two statements are logically equivalent.
+\end{proof}
+ 
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}

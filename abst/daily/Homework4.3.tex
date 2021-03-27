@@ -1,0 +1,87 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{fact}[2][Fact]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{definition}[2][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Daily Homework 2-5-2021}%replace X with the appropriate number
+\author{Kevin Christensen, Joe Kelly\\ %replace with your name
+Introduction to Abstract Math} %if necessary, replace with your course title
+ 
+\maketitle
+ 
+\begin{definition}{3.34}
+We write $\N = {1,2,3,4,...}$ for the set of natural numbers or positive integers.
+\end{definition}
+
+\hline
+ 
+\begin{theorem}{3.32} 
+Suppose $n \in \Z$. If $n^2$ is even then $n$ is even. Prove by contradiction.
+\end{theorem}
+ 
+\begin{proof}
+Assume $n^2$ is even and $n$ is odd. We proved in problem 2.9 that the product of an odd integer and an odd integer is odd, which means that if $n$ is odd, then $n^2$ is odd. However, this contradicts that $n^2$ is even.
+\end{proof}
+
+\begin{theorem}{3.33}
+If $x$ is a real number in $[0,\pi /2]$, then sin $x$ + cos $x$ $\ge 1$. Prove by contradiction
+\end{theorem}
+ 
+\begin{proof}
+Assume $x$ is a real number in $[0,\pi /2]$ and that  sin $x$ + cos $x < 1$. We know that $|sinx|,|cosx| \in [0,1]$ for any $x \in \mathds{R}$. The sin $x$ and the cos $x$ represent the length of the legs of a right triangle whose hypotenuse is 1, and which has an inner angle of $x$. The sum of the length of any two sides of a triangle is greater than or equal to the length of the third side. Therefore, $|sinx| + |cosx| \ge 1$. If sin $x$ + cos $x < 1$, then $sinx \vee cosx < 1$. This occurs when $x \in \mathds{R}$ in $(\pi /2, 2\pi)$. This contradicts our statement that $x$ is a real number in $[0,\pi /2]$.
+\end{proof}
+
+\begin{theorem}{3.35} 
+Assume $x,y \in N$. if $x$ divides $y$ then $x \le y$.
+\end{theorem}
+ 
+\begin{proof}
+Assume $x \mid y$ and that $x > y$. By Definition 2.11 there exists some integer $k$ such that $y = xk$. We know that $x$ and $y$ are positive integers, and for $y = xk$ to hold $k$ must also be positive. However, if $x > y$, product of $x$ and any natural number would be greater than $y$. We cannot find any $k \in \Z$ such that $y = xk$, therefore contradicting that $x \mid y$.
+\end{proof}
+ 
+\begin{problem}{3.36}
+Is Theorem 3.35 true if we only assume $x,y \in \Z$? Give a proof or a counterexample.
+\end{problem}
+ 
+\begin{proof}
+We will proceed with a counterexample. If $x = 5$ and $y = -15$, then $x \mid y$ because $y = (-3)x$ by Definition 2.11. However, in this case $x > y$, contradicting the assertion in Theorem 3.35.
+\end{proof}
+ 
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}Homework4.3

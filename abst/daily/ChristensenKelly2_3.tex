@@ -1,0 +1,120 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{fact}[2][Fact]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{definition}[2][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Daily Homework 2-3-21}%replace X with the appropriate number
+\author{Kevin Christensen, Joe Kelly\\ %replace with your name
+Introduction to Abstract Math} %if necessary, replace with your course title
+ 
+\maketitle
+ 
+\begin{problem}{3.27}
+Consider the following statement: \\
+Assume $n \in \Z$. If $n^2$ is odd, then $n$ is an odd integer.\\
+The items below can be assembled to form a proof of this statement, but they are currently out
+of order. Put them in the proper order.\\
+1. Thus, we assume that n is an even integer.\\
+2. We will prove this by contrapositive.\\
+3. Since n = 2k, we have that $n^2 = (2k)^2 = 4k^2$.\\
+4. Since k is an integer, $2k^2$ is also an integer by Fact 2.3.\\
+5. By Definition 2.1, there is an integer k such that n = 2k.\\
+6. Since the contrapositive is equivalent to the original statement and we have proved the
+contrapositive, the original statement is true.\\
+7. By Definition 2.1, $n^2$ is an even integer.\\
+8. The contrapositive of the statement “If $n^2$ is odd then n is odd” is “If n is an even integer, then $n^2$ is an even integer.”\\
+9. Notice that $n^2 = 2(2k^2)$.
+\end{problem}
+
+\begin{solution}
+
+2. We will prove this by contrapositive.\\
+8. The contrapositive of the statement “If $n^2$ is odd then n is odd” is “If n is an even integer, then $n^2$ is an even integer.”\\
+1. Thus, we assume that n is an even integer.\\
+5. By Definition 2.1, there is an integer k such that n = 2k.\\
+3. Since n = 2k, we have that $n^2 = (2k)^2 = 4k^2$.\\
+9. Notice that $n^2 = 2(2k^2)$.
+4. Since k is an integer, $2k^2$ is also an integer by Fact 2.3.\\
+7. By Definition 2.1, $n^2$ is an even integer.\\
+6. Since the contrapositive is equivalent to the original statement and we have proved the
+contrapositive, the original statement is true.\\
+
+
+Step 2, step 8, step 1, step 5, step 3, step 9, step 4, step 7, step 6.
+\end{solution}
+\pagebreak
+Try proving each of the next three theorems by proving the contrapositive of the given
+statement.
+
+\begin{theorem}{3.28} 
+Assume $n \in \Z$. If $n^2$ is even, then $n$ is even.
+\end{theorem}
+ 
+\begin{proof}
+We will prove this by contrapositive. The contrapositive of the statement: ``Assume $n \in \Z$. If $n^2$ is even, then $n$ is even" is ``Assume $n \in \Z$. If $n$ is odd, then $n^2$ is odd." Assume n is odd.  By Problem 2.9, the product of an odd integer and an odd integer is odd. Since $n^2$ is the product of two odd integers, n and n, $n^2$ is an odd integer. Therefore, by proving the contrapositive, by Theorem 3.25, the original statement is true. 
+
+
+\end{proof}
+ 
+ \begin{theorem}{3.29}
+Assume $n,m \in \Z$. If $nm$ is odd, then both $n$ and $m$ are odd.
+\end{theorem}
+
+ 
+\begin{proof}
+ We will prove this theorem by contrapositive. The contrapositive of the statement: ``Assume $n,m \in \Z$. If $nm$ is odd, then both $n$ and $m$ are odd." is :``Assume $n,m \in \Z$. If either $n$, $m$ or both are even (by DeMorgan's Law), then $nm$ is even." Let n be even and m be any integer. We proved in Problem 2.10 that if at least one of a pair of integers is even, their product is even. Therefore, nm is even. Thus, by proving the contrapositive, by Theorem 3.25, the original statement is true.
+ 
+ 
+\end{proof}
+
+\begin{theorem}{3.30} 
+Assume $n,m \in \Z$. If $nm$ is even, then either $n$ or $m$ is even.
+\end{theorem}
+
+ 
+\begin{proof}
+
+We will prove this theorem by contrapositive. The contrapositive of the statement ``Assume $n,m \in \Z$. If $nm$ is even, then either $n$ or $m$ is even." is ``Assume $n,m \in \Z$. If both $n$ and $m$ are odd (by DeMorgan's Law), then $nm$ is odd." Let $n$ and $m$ be two odd integers. We proved in problem 2.10 that the product of two odd integers is odd. Therefore, $nm$ is odd. Thus, by proving the contrapositive, by Theorem 3.25, the original statement is true.
+ 
+
+\end{proof}
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}
+

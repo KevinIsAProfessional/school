@@ -1,0 +1,83 @@
+Definition 2.1:
+  An integer is even if n=2k for some integer k.
+  
+Definition 2.2
+  An integer is odd if n=2k+1 for some integer k.
+
+Fact 2.3.1
+  Every integer is either even or odd, but never both
+
+Fact 2.3.2
+  Sums and products of integers are integers
+
+
+
+
+
+
+
+
+
+Problem 2.4: If n is an integer then the sum of n and n+1 is odd.
+  Proof:
+    Let n be an integer. By adding n+(n+1), we get 2n+1. By definition 2.2, we see that the sum of n and n+1 is odd for all n. []
+
+
+
+
+
+
+
+
+
+Problem 2.5: If n is an even integer, then n^2 is an even integer.
+  Proof:
+    Let n be an even integer. Using definition 2.1, we can express n^2 as (2k)^2, which can then be expressed as 4k^2. 
+    Let us define a new variable j, where 2k^2=j. By Fact 2.3.2, we know that j is an integer. Using this subsititution, we see that n^2 = 2(2k^2) = 2j. 
+    Since j is an integer, we use definiton 2.1 to see that n^2 is even for all n. []
+
+
+
+
+
+
+
+
+Problem 2.6: Prove that the statement "The sum of an even integer and an odd integer is odd.
+  Proof: 
+    Let n be an even integer and m be an odd integer. By definition 2.1 and 2.2 respectively, we can write n and m as 2k and 2j+1. Now, we write n+m as 2k+2j+1, which is equivalent to 2(k+j)+1. 
+    We define a new variable i as i=(k+j). By substituting in i, we get 2(k+j)+1=2i+1. We know that i is an integer by Fact 2.3.2, and by Definiton 2.2 we know that n+m is odd. [] 
+
+
+
+
+
+
+
+
+Question 2.7.1: Did Theorem 2.4 need to come before Problem 2.6?
+  No.
+Question 2.7.2: Could we have used Problem 2.6 to prove Theorem 2.4?
+  Yes.
+Question 2.7.3: Outline how this alternate proof would go.
+  We could use Definitions 2.1 and 2.2 to prove that n and n+1 will never be both even or both odd, i.e. the question is a sum of an even number and an odd number by definition.
+  Then we could use Problem 2.6 to prove that the sum of an even number and an odd number is odd.
+  We use magic and alchemy to combine the two previous ingredients into a simple and beautiful proof that Theorem 2.4 is... Drumroll please... True! *applause break*
+Question 2.7.4: Which way is better?
+  I can see value in both ways. If the goal is simply to prove Theorem 2.4, I don't like using Problem 2.6 bacause it is faster and cleaner to prove the Theorem the way we did in the first place.
+  However, Problem 2.6 is an interesting concept. Proving it leasds to much more interesting insights into the nature of integers and will be useful in thinking about integers moving forward.
+
+
+
+
+
+
+
+
+
+Theorem 2.8: Provide a counterexample to the statement "The product of an even integer and and odd integer is odd."
+  Conjecture 1: The product of an even integer and an odd integer is odd. 
+  Proof:
+    Lets consider the equation n*m=x, where n is an even integer and m is an odd integer. If Conjecture 1 is true, then x will be odd for any combination of n and m. 
+    Lets test our conjecture with n=2 and m=3. In this case, n*m = 2*3 = 6 = x. 6 can be written in the form 2(3), or 2k where k=3. By Definiton 2.1, we see that 6 is even, therefore x is even. 
+    This contradicts, and therefore disproves, Conjecture 1. []
